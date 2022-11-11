@@ -1,0 +1,2 @@
+const t=document.querySelector("[data-start]"),e=document.querySelector("[data-stop]"),a={intervalId:null,getRandomHexColor:()=>`#${Math.floor(16777215*Math.random()).toString(16)}`,start(){this.intervalId=setInterval((()=>{document.body.style.backgroundColor=this.getRandomHexColor()}),1e3),t.disabled=!0},stop(){clearInterval(this.intervalId),t.disabled=!1}};t.addEventListener("click",a.start.bind(a)),e.addEventListener("click",a.stop.bind(a));
+//# sourceMappingURL=01-color-switcher.bea980bd.js.map
