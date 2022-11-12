@@ -1,5 +1,5 @@
 import flatpickr from 'flatpickr';
-import Notiflix from 'notiflix';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import 'flatpickr/dist/flatpickr.min.css';
 
 const pageRefs = {
@@ -20,7 +20,7 @@ const selectedDate = flatpickr(pageRefs.inputRef, {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (Date.now() >= selectedDates[0].getTime()) {
-      Notiflix.Notify.failure('Please choose a date in the future', {
+      Notify.failure('Please choose a date in the future', {
         clickToClose: true,
       });
       return;
