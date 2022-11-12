@@ -14,10 +14,8 @@ function createPromise(position, time) {
 function createPromises(delay, step, amount) {
   for (let i = 1; i <= amount; i += 1) {
     createPromise(i, delay)
-      .then(({ position, time }) => Notify.success(`✅ Fulfilled promise ${position} in ${time}ms`))
-      .catch(({ position, time }) =>
-        Notify.failure(`❌ Rejected promise ${position} in ${time}ms`)
-      );
+      .then(({ position, time }) => Notify.success(`Fulfilled promise ${position} in ${time}ms`))
+      .catch(({ position, time }) => Notify.failure(`Rejected promise ${position} in ${time}ms`));
     delay += step;
   }
 }
