@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://sennarion.github.io/date-time-promises",
+  "homepage": "https://sennarion.github.io/hw-js-promises",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /date-time-promises/"
+    "build": "parcel build src/*.html --public-url /hw-js-promises/"
   },
   "repository": {
     "type": "git",
